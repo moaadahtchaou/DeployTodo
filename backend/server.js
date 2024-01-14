@@ -11,6 +11,9 @@ app.use((req,res,next)=>{
     next()
 })
 // Routes
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
 app.use("/api/workout",workout)
 
 //Mongoose
