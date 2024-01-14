@@ -1,6 +1,6 @@
 const allowedOrigins = [
     'http://localhost:3500',
-    'https://deploy-todo-olive.vercel.app'
+    'https://deploy-workout-live.vercel.app'
 
 ]
 module.exports=allowedOrigins
