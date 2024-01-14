@@ -8,7 +8,7 @@ const Home = () =>{
     useEffect(()=>{
 
         const handlefetch = async () => {
-            const GetData= await fetch("/api/workout")
+            const GetData= await fetch("https://deploy-todo-api.vercel.app/api/workout")
             const jsondata=await GetData.json()
             dispatch({type: 'SET_WORKOUTS', payload: jsondata})
            
