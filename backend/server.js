@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.use("/api/workout",workout)
 
 //Mongoose
-mongoose.connect(process.env.DATABASE_URI)
+mongoose.connect(process.env.VERCEL_DATABASE_URI)
     .then(()=>{
         //listen to req
         app.listen(3500,()=>{
