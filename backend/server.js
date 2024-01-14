@@ -17,10 +17,11 @@ app.get('/', (req, res) => {
 app.use("/api/workout",workout)
 
 //Mongoose
-app.listen(3500,()=>{
+mongoose.connect(process.env.MONG_URL)
+    .then(()=>{
+        //listen to req
+        app.listen(3500,()=>{
         console.log("connect to db and listen",3500)
-    })
-
-
-
+    })})
+    .catch((err)=>res.send(err))
     
