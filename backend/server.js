@@ -1,9 +1,10 @@
+const corsOptions = require("./config/corsOption")
 const mongoose=require("mongoose")
 const workout =require("./routes/workout")
 const express=require("express")
+const cors = require("cors")
 const app =express()
-
-
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use((req,res,next)=>{
