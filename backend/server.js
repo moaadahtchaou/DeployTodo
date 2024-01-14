@@ -1,4 +1,4 @@
-
+require("dotenv").config()
 const mongoose=require("mongoose")
 const workout =require("./routes/workout")
 const express=require("express")
@@ -18,8 +18,8 @@ app.use("/api/workout",workout)
 mongoose.connect(process.env.MONG_URL)
     .then(()=>{
         //listen to req
-        app.listen(3500,()=>{
-        console.log("connect to db and listen",3500)
+        app.listen(process.env.PORT,()=>{
+        console.log("connect to db and listen",process.env.PORT)
     })})
     .catch((err)=>console.log(err))
     
