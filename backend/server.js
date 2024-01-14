@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.use("/api/workout",workout)
 
 //Mongoose
-mongoose.connect(process.env.DATABASE_URI)
+mongoose.connect(process.env.DATABASE_URI) //*https://vercel.com/moaadahtchao-gmailcom/deploy-todo-api/settings/environment-variables
     .then(()=>{
         //listen to req
         app.listen(3500,()=>{
