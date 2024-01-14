@@ -1,4 +1,4 @@
-const corsOptions = require("./config/corsOption")
+const corsOptions = require("./config/corsOptions")
 const mongoose=require("mongoose")
 const workout =require("./routes/workout")
 const express=require("express")
