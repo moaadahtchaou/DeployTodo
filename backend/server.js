@@ -1,3 +1,4 @@
+require("dotenv").config()
 const corsOptions = require("./config/corsOptions")
 const mongoose=require("mongoose")
 const workout =require("./routes/workout")
@@ -18,7 +19,7 @@ app.get('/', (req, res) => {
 app.use("/api/workout",workout)
 
 //Mongoose
-mongoose.connect("mongodb+srv://moaadahtchao:moaad123456@todo.rsjey1v.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env.DATABASE_URI)
     .then(()=>{
         //listen to req
         app.listen(3500,()=>{
