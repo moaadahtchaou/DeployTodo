@@ -12,7 +12,7 @@ const WorkoutForm = () => {
 
     const workout = {title, load, reps}
     
-    const response = await fetch('/api/workout', {
+    const response = await fetch('https://deploy-todo-api.vercel.app/api/workout', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
