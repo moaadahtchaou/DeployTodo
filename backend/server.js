@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 app.use("/api/workout",workout)
 
 //Mongoose
-mongoose.connect(process.env.MONG_URL)
+mongoose.connect("mongodb+srv://moaadahtchao:moaad123456@todo.rsjey1v.mongodb.net/?retryWrites=true&w=majority")
     .then(()=>{
         //listen to req
         app.listen(3500,()=>{
